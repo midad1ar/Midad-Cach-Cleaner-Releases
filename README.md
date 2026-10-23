@@ -23,7 +23,10 @@
 
 ## المميزات
 
-- **فحص وتنظيف 16 نوعًا من الكاش:** الملفات المؤقتة، كاش كرت الشاشة، Steam، تحديثات ويندوز، تقارير الأعطال، المتصفحات (Chrome / Edge / Brave)، CapCut، Discord، Streamlabs، VS Code، Spotify، Telegram، pip، npm، Gradle، Flutter، NuGet، وسلة المحذوفات.
+- **فحص وتنظيف 19 فئة من الكاش:** الملفات المؤقتة، كاش كرت الشاشة، Steam، تحديثات ويندوز، تقارير الأعطال، المتصفحات (Chrome / Edge / Brave)، CapCut، Discord، Streamlabs، VS Code، Spotify، Telegram، pip، npm، Gradle، Flutter، NuGet، وسلة المحذوفات.
+- **كاش برامج المونتاج والبث:** Adobe Premiere و After Effects (Media Cache وملفات الموجات الصوتية وكاش Camera Raw)، و DaVinci Resolve (CacheClip)، و Filmora، و OBS Studio.
+- **تحليل المساحة:** يعرض أكبر المجلدات (مع الدخول إلى داخلها) وأكبر 100 ملف في أي قرص، مع توضيح للملفات المعروفة مثل hiberfil.sys و Windows.old. يعرض فقط ولا يحذف أي شيء.
+- **التحقق من التحديثات:** يظهر زر أخضر عند صدور إصدار جديد، ويُحدَّث البرنامج بضغطة واحدة. المثبّت يُنزَّل من هذه الصفحة فقط، ولا يُشغَّل إلا إذا طابقت بصمته SHA-256 البصمة المنشورة.
 - **كل الأقراص:** يكتشف الأقراص تلقائيًا ويعرض المساحة الفارغة وحجم الكاش في كل قرص.
 - **تنبيه البرامج المفتوحة:** علامة "مفتوح" بجانب البرامج التي تعمل الآن، لأن ملفاتها المستخدمة لا يمكن حذفها.
 - **زر إيقاف:** يمكن إيقاف الفحص أو التنظيف في أي لحظة.
@@ -31,9 +34,13 @@
 - **تنظيف تلقائي:** يومي أو أسبوعي أو شهري في الخلفية، مع تنبيه عندما تقل مساحة القرص C.
 - **يتذكر اختياراتك** بين مرة وأخرى.
 
-| نقل الكاش | التنظيف التلقائي | المثبّت |
-|---|---|---|
-| ![نقل الكاش](docs/move-caches.png) | ![التنظيف التلقائي](docs/auto-clean.png) | ![المثبّت](docs/setup.png) |
+| تحليل المساحة | نقل الكاش |
+|---|---|
+| ![تحليل المساحة](docs/space.png) | ![نقل الكاش](docs/move-caches.png) |
+
+| التنظيف التلقائي | المثبّت |
+|---|---|
+| ![التنظيف التلقائي](docs/auto-clean.png) | ![المثبّت](docs/setup.png) |
 
 ## الأمان
 
@@ -44,6 +51,7 @@
 - الملفات المستخدمة حاليًا يتخطاها بدون أخطاء.
 - عند **نقل الكاش**: ينسخ أولًا ثم يتحقق من عدد الملفات وحجمها، ولا يحذف المكان القديم إلا بعد نجاح التحقق.
 - التنظيف التلقائي لا يفرّغ سلة المحذوفات، ويتخطى البرامج المفتوحة.
+- **تحليل المساحة** يقرأ فقط: لا يحذف ولا ينقل أي ملف، ولا يتبع الروابط.
 
 ## الإزالة
 
@@ -61,4 +69,4 @@ Get-FileHash .\MidadCachCleaner-Setup.exe -Algorithm SHA256
 
 ---
 
-**English:** Midad Cach Cleaner is a Windows 10/11 app that safely cleans temp files and app caches, moves developer caches to another drive, and can run on a schedule. Download the installer or the portable exe from the [latest release](https://github.com/midad1ar/Midad-Cach-Cleaner-Releases/releases/latest).
+**English:** Midad Cach Cleaner is a Windows 10/11 app that safely cleans temp files and app caches (including Adobe, DaVinci Resolve, Filmora and OBS), shows what fills a drive, moves developer caches to another drive, can run on a schedule, and updates itself with SHA-256 verification. Download the installer or the portable exe from the [latest release](https://github.com/midad1ar/Midad-Cach-Cleaner-Releases/releases/latest).
